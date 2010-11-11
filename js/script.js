@@ -4,7 +4,8 @@ $(document).ready(function() {
     $("#codeOutput").focus();
     $("#codeOutput").select();
   })
-
+  
+  // Make the frontpage button a jQueryUI button.
   $('#voyeur_launch_dialog').button();
   $('#voyeur_launch_dialog').click(function() {
     return false;
@@ -15,8 +16,6 @@ $(document).ready(function() {
     title: 'Voyeur settings',
     autoOpen: false,
     width: 500,
-    height: 320,
-    resizable: false,
     draggable: false,
     modal: true,
     buttons: {
@@ -41,23 +40,11 @@ $(document).ready(function() {
     width: 400,
     modal: false,
     draggable: true,
-    resizable: false,
     position: 'top'
   });
-
-  // Dialog Link
-  $('#dialog_link').click(function(){
-    $('#voyeur_dialog').dialog('open');
-    return false;
-  });
-
-  //hover states on the static widgets
-  $('#dialog_link, ul#icons li').hover(
-    function() { $(this).addClass('ui-state-hover'); }, 
-    function() { $(this).removeClass('ui-state-hover'); }
-  );
 });
 
+// Saves the values of user input.
 function saveValues() {
   voyeurWidth = $('#voyeur_width').attr('value');
   voyeurHeight = $('#voyeur_height').attr('value');
@@ -66,6 +53,7 @@ function saveValues() {
   allowUser = $('#allow_user').attr('checked');
 }
 
+// Generates the code to place in the generated code textarea (#codeOutput)
 function generateHTML() {
   saveValues();
   var generatedCode = '<div id="voyeurContainer" style="width: '+ voyeurWidth +'; margin: 0px auto 0px auto; text-align:center;">' + '\r\n';
@@ -102,5 +90,4 @@ function generateHTML() {
   
   $('#codeOutput').attr("value", generatedCode);
   $('#afterGenerate').text('Copy the text above and paste it in your HTML code.');
-  
 }

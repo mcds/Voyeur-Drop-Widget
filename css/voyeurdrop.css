@@ -1,9 +1,16 @@
-* {margin:0;padding:0;}
+* {
+  margin:0;
+  padding:0;
+}
 
 html, body {
   height: 100%;
   /* makes dialog box smaller */
   font: 80% "Trebuchet MS", sans-serif;
+}
+
+td { /* compensate for 0 padding in * */
+  padding: 15px 0px 5px;
 }
 
 .voyeur-explain {
