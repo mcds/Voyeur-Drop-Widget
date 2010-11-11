@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="Content-Type">
+  <title>Voyeur Drop Widget</title>
+  <script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui-1.8.6.custom.min.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/voyeurdrop.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.6.custom.css" type="text/css" media="all">
+  <!--[if !IE 7]>
+    <style type="text/css">
+      #content {display:table;height:100%}
+    </style>
+  <![endif]-->
+</head>
+<body>
+<div id="content" style="text-align: center;">
+  <div id="voyeurContainer" style="padding-top: 25px;">
+    <a href="http://voyeurtools.org" target="_blank"><img alt="Voyeur" src="voyeur.png" style="border: 0px solid"></a>
+    <br />
+    <table id="voyeurContent" border="0" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;"><br>
+            <div style="padding: 10px; padding-top: 7px; margin-right: 60px; width: 350px;" class="voyeur-explain">
+              <strong>Welcome to the Voyeur Drop widget!</strong><br />
+              The Voyeur Drop Widget allows you to place Voyeur where ever you would like. Voyeur is a web-based text analysis environment.
+              For more information, please visit <a href='http://hermeneuti.ca/voyeur' target='_blank'>Hermeneuti.ca</a>.
+              <br /><br />
+              <div style="text-align: center";>
+                <button id="voyeur_launch_dialog">Generate</button>
+              </div>
+            </div>
+          </td>
+          <td style="vertical-align: top;">
+          <a href="http://voyeurtools.org/tool/Cirrus/?input=http://shakespeare.mit.edu/macbeth/full.html&amp;stopList=stop.en.taporware.txt"
+            target="_blank">
+            <img alt="Cirrus" src="cirrus.png" style="border: 0px solid ; width: 195px; height: 273px;">
+          </a>
+          <br />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+<div id="voyeur_dialog" style="display: none;">
+  <table width="100%">
+    <tr>
+      <td width="40%" valign="baseline">
+        <h5>Dimensions of Voyeur (px):</h5>
+      </td>
+      <td width="60%" valign="baseline">
+        <input type="text" id="voyeur_width" name="voyeur_width" size="5" maxlength="3" autocomplete="off"
+          value="300"
+        />&nbsp;&nbsp;x&nbsp;
+        <input type="text" id="voyeur_height" name="voyeur_height" size="5" maxlength="4" autocomplete="off"
+          value="300"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td width="60%" valign="baseline">
+        <h5>Tool:</h5>
+      </td>
+      <td width="40%" valign="baseline">
+        <select id="voyeur_tool" name="voyeur_tool" title="Voyeur tool selection."> 
+          <option value="Bubbles">Bubbles</option> 
+          <option value="Cirrus" selected="selected">Cirrus</option> 
+          <option value="CorpusTypeFrequenciesGrid">Frequency Grid</option> 
+          <option value="Links">Links</option>
+          <option value="Reader">Reader</option> 
+          <option value="CorpusSummary">Summary</option> 
+          <option value="WordCountFountain">Word Count Fountain</option> 
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td width="60%" valign="baseline">
+        <h5>Voyeur launches automatically on page load.</h5>
+      </td>
+      <td width="40%" valign="baseline">
+        <label for="allow_auto_reveal">
+          <input type="checkbox" id="allow_auto_reveal" name="allow_auto_reveal" checked="checked">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td width="60%" valign="baseline">
+        <h5>Allow users to choose Voyeur options.</h5>
+      </td>
+      <td width="40%" valign="baseline">
+        <label for="allow_user">
+          <input type="checkbox" id="allow_user" name="allow_user">
+        </label>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="voyeur_generate" title="Generated code" style="display: none; text-align: center;">
+  <textarea id="codeOutput" class="text-input" type="text" readonly="readonly" value="">Click &quot;Generate&quot; to output code.</textarea>
+  <h3 id="afterGenerate"></h3>
+</div>
+<!-- Footer -->
+
+<div id="footer">
+  <a href="http://hermeneuti.ca/voyeur/" target="_blank">Voyeur Tools</a>
+   , 
+  <a href="http://stefansinclair.name/">Stéfan Sinclair</a>
+   &amp; 
+  <a href="http://geoffreyrockwell.com">Geoffrey Rockwell</a>
+   (©2010) v. 1.0 
+  <span style="color: red;">beta</span>
+   (2208)
+</div>
+</body>
+</html>

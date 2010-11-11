@@ -1,0 +1,68 @@
+* {margin:0;padding:0;}
+
+html, body {
+  height: 100%;
+  /* makes dialog box smaller */
+  font: 80% "Trebuchet MS", sans-serif;
+}
+
+.voyeur-explain {
+  border: 1px solid #dddddd;
+  background: #eeeeee url(../highlight_soft.png) 50% top repeat-x; color: #333333;
+}
+
+.text-input {
+  width: 350px;
+  height: 200px;
+}
+
+#content {
+  min-height: 100%;
+}
+
+#voyeurContainer {
+  width: 80%;
+  overflow: auto;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#voyeurContent {
+  margin-left: auto;
+  margin-right: auto;
+  color: #333;
+  font: normal normal normal 11px/normal tahoma, arial, verdana, sans-serif;
+}
+
+#footer {
+  position: relative;
+  margin-top: -20px;
+  height: 20px;
+  clear: both;
+  width: 100%;
+  text-align: center;
+  background-color: #EEE;
+  border-bottom-color: #D0D0D0;
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+  border-left-color: #D0D0D0;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #D0D0D0;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #D0D0D0;
+  border-top-style: solid;
+  border-top-width: 0px;
+  font-size: 13px;
+}
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/
+}

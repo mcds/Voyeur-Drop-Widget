@@ -1,0 +1,73 @@
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Voyeur Drop plugin</title>
+		<link type="text/css" href="css/smoothness/jquery-ui-1.8.5.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+  	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <a href="#" id="dialog_link" class="ui-state-default ui-corner-all">Click here to generate the Voyeur plugin.</a>
+
+  <!-- Voyeur dialog box -->
+  <div id="voyeur_dialog" title="Voyeur - reveal your texts">
+    <table width="100%">
+      <tr>
+        <td width="60%" valign="baseline">
+          <h4>Dimensions of Voyeur (px):</h4>
+        </td>
+        <td width="40%" valign="baseline">
+          <input type="text" id="voyeur_width" name="voyeur_width" size="5" maxlength="3" autocomplete="off"
+            value="300"
+          />&nbsp;&nbsp;x&nbsp;
+          <input type="text" id="voyeur_height" name="voyeur_height" size="5" maxlength="4" autocomplete="off"
+            value="300"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td width="60%" valign="baseline">
+          <h4>Tool:</h4>
+        </td>
+        <td width="40%" valign="baseline">
+          <select id="voyeur_tool" name="voyeur_tool" title="Voyeur tool selection."> 
+            <option value="Bubbles">Bubbles</option> 
+            <option value="Cirrus" selected="selected">Cirrus</option> 
+            <option value="CorpusTypeFrequenciesGrid">Frequency Grid</option> 
+            <option value="Links">Links</option> 
+            <option value="Reader">Reader</option> 
+            <option value="CorpusSummary">Summary</option> 
+            <option value="WordCountFountain">Word Count Fountain</option> 
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td width="60%" valign="baseline">
+          <h4>Voyeur launches automatically on page load.</h4>
+        </td>
+        <td width="40%" valign="baseline">
+          <label for="allow_auto_reveal">
+            <input type="checkbox" id="allow_auto_reveal" name="allow_auto_reveal" checked="checked">
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td width="60%" valign="baseline">
+          <h4>Allow users to choose Voyeur options.</h4>
+        </td>
+        <td width="40%" valign="baseline">
+          <label for="allow_user">
+            <input type="checkbox" id="allow_user" name="allow_user">
+          </label>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="voyeur_generate" title="Generated code">
+    <input id="codeOutput" class="textInput" type="text" readonly="" value="Click &quot;Generate&quot; to output code."> 
+		<h3 id="afterGenerate"></h3>
+  </div>
+
+</body>
+</html>
