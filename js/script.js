@@ -17,6 +17,7 @@ $(document).ready(function() {
     autoOpen: false,
     width: 500,
     draggable: false,
+    resizable: true,
     modal: true,
     buttons: {
       "Generate": function() { 
@@ -40,6 +41,7 @@ $(document).ready(function() {
     width: 400,
     modal: false,
     draggable: true,
+    resizable: true,
     position: 'top'
   });
 });
