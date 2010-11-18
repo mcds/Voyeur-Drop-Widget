@@ -56,9 +56,7 @@ function saveValues() {
 // Generates the code to place in the generated code textarea (#codeOutput)
 function generateHTML() {
   saveValues();
-  var generatedCode = '<script type="text/javascript">' + '\r\n';
-  generatedCode += 'document.write(\'<iframe id="voyeur_iframe" width="'+ voyeurWidth +'" height="'+ voyeurHeight +'" src="http://voyeurtools.org/tool/'+ voyeurTool +'/?useReferer=true"></iframe>\');' + '\r\n';
-  generatedCode += '</script>' + '\r\n';
+  var generatedCode = '<iframe id="voyeur_iframe" width="'+ voyeurWidth +'" height="'+ voyeurHeight +'" src="http://voyeurtools.org/tool/'+ voyeurTool +'/?useReferer=true"></iframe>' + '\r\n';
   
   $('#codeOutput').attr("value", generatedCode);
   $('#afterGenerate').text('Copy the text above and paste it in your HTML code.');
