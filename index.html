@@ -66,7 +66,7 @@
         <h5>Tool:</h5>
       </td>
       <td width="40%" valign="baseline">
-        <select id="voyeur_tool" name="voyeur_tool" title="Voyeur tool selection."> 
+        <select id="voyeur_tool" name="voyeur_tool" title="Voyeur tool selection." onchange="toolClick()"> 
           <option value="Bubbles">Bubbles</option> 
           <option value="Cirrus" selected="selected">Cirrus</option> 
           <option value="CorpusTypeFrequenciesGrid">Frequency Grid</option> 
@@ -75,6 +75,16 @@
           <option value="CorpusSummary">Summary</option> 
           <option value="WordCountFountain">Word Count Fountain</option> 
         </select>
+      </td>
+    </tr>
+    <tr id="remove_func_words_tr">
+      <td width="60%" valign="baseline">
+        <h5>Remove function words like "the".</h5>
+      </td>
+      <td width="40%" valign="baseline">
+        <label for="remove_func_words">
+          <input type="checkbox" id="remove_func_words" name="remove_func_words" checked="checked">
+        </label>
       </td>
     </tr>
   </table>
